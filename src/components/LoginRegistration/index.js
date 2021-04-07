@@ -25,7 +25,7 @@ const useStyles = makeStyles({
         zIndex: 100
     },
     tab: {
-        padding: '4vh 0 2vh 0',
+        padding: '1vh 0',
         fontSize: '20px',
         flex: 1,
         backgroundColor: '#ecf4fb',
