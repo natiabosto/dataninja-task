@@ -10,8 +10,8 @@ React Context is used for global state management (for grid state fetch, by disp
 
 ## To run the project locally, after cloning run:
 
-### `yarn`
-### `yarn start`
+### >>`yarn`
+### >>`yarn start`
 
 
 
