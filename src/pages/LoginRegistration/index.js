@@ -15,7 +15,7 @@ const useStyles = makeStyles({
     loginRegistrationContainer: {
         paddingTop: '20vh',
         height: '80vh',
-        backgroundColor: 'rgba(255, 255, 255, 0.85)'
+        backgroundColor: 'rgba(255, 255, 255, 0.95)'
     },
     loginRegistrationForm: {
         flexGrow: 1,

@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import { Dashboard, Login } from './pages'
 import { isAuthorised } from './utils'
 
