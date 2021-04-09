@@ -1,11 +1,10 @@
 import React from 'react';
 import './App.css';
-import { Dashboard, Login } from './components'
+import { Dashboard, Login } from './pages'
 import { isAuthorised } from './utils'
-import GlobalState from './context/GlobalState';
 
 function App() {
-  return <GlobalState>{isAuthorised() ? <Dashboard /> : <Login />}</GlobalState>
+  return isAuthorised() ? <Dashboard /> : <Login />
 }
 
 export default App;

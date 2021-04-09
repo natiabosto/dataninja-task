@@ -1,7 +1,8 @@
 import React from 'react';
-import { CustomTable } from '../../components';
 import { makeStyles } from '@material-ui/styles';
-import {GlobalContext} from '../../context/GlobalState'
+import { CustomTable } from '../../components';
+import { GlobalContext } from '../../context/GlobalState'
+import { GET_GRID_STATE } from '../../context/constants';
 
 const useStyles = makeStyles({
     wrapper: {
@@ -26,8 +27,12 @@ function Dashboard() {
     const context = React.useContext(GlobalContext);
 
     React.useEffect(() => {
-        console.log(context.got.rows);
-    }, [context])
+        context.getGridData({
+            action: GET_GRID_STATE,
+            gridName: 'got',
+            STK: 'sdfsdfsdf'
+        })
+    }, [])
 
     return (
         <div className={classes.wrapper}>
@@ -35,12 +40,20 @@ function Dashboard() {
                 Dashboard table
             </h1>
             <div className={classes.tableContainer}>
+                <CustomTable rows={context.got.rows} />
                 {/* <CustomTable cells={cells} rows={rows} checkboxSelection  /> */}
             </div>
-            <button onClick={context.getGotData.bind(
-                    this,
-                    'ssss'
-                  )}>test</button>
+            {/* <button
+                onClick={() => {
+                    context.getGridData({
+                        action: GET_GRID_STATE,
+                        gridName: 'got',
+                        STK: 'sdfsdfsdf'
+                    })
+                }}
+            >
+                test
+            </button> */}
         </div>
     )
 }

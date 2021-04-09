@@ -1,5 +1,5 @@
-import { GET_GOT_STATE } from './constants';
-import  { getGridState } from '../api/gridData.action'
+import { GET_GRID_STATE } from './constants';
+import { getGridData } from '../api'
 
 export const initialState = {
     got: {
@@ -10,12 +10,16 @@ export const initialState = {
 }
 
 export const globalReducer = async (state = initialState, action) => {
-
     switch (action.type) {
 
-        case GET_GOT_STATE:
-            let rows =  (await getGridState()).rows;
-            console.log('action data ',rows)
+        case GET_GRID_STATE:
+            let rows;
+            try {
+                rows = (await getGridData({ action })).rows;
+            }
+            catch (e) {
+                console.log(e)
+            }
             return {
                 ...state,
                 got: {

@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { StateProvider } from './GlobalState';
+import GlobalState from './context/GlobalState';
 
 const app = (
   <React.StrictMode>
-    <StateProvider>
+    <GlobalState>
       <App />
-    </StateProvider>
+    </GlobalState>
   </React.StrictMode>
 )
 

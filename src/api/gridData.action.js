@@ -1,16 +1,14 @@
-import React from 'react';
 import callApi from './callApi';
-import { GlobalContext } from '../GlobalState'
 
 
-export async function getGridState() {
+export async function getGridData({ action, gridName, stk }) {
     const data = await callApi('test-url', {
         method: 'post',
         params: {
-            action: 'getGridState',
-            stk: 'stkhash'
+            action: action,
+            gridName: gridName,
+            stk: stk
         }
     })
-
     return data;
 }

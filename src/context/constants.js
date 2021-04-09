@@ -1,1 +1,1 @@
-export const GET_GOT_STATE = 'GET_GOT_STATE';
+export const GET_GRID_STATE = 'GET_GRID_STATE';

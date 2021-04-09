@@ -1,7 +1,3 @@
-import Dashboard from './Dashboard'
-import Login from './LoginRegistration'
-import CustomTable from './Table'
+import CustomTable from './CustomTable'
 
-export { Dashboard }
-export { Login }
 export { CustomTable }
