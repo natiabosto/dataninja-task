@@ -1,8 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 import { Button, Modal, Paper, Tab, Tabs, TextField } from '@material-ui/core';
-import { login } from './login.action'
-import { register } from './registration.action'
+import { login } from '../../api/login.action'
+import { register } from '../../api/registration.action'
 
 const useStyles = makeStyles({
     wrapper: {

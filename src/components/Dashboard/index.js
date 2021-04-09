@@ -1,6 +1,7 @@
 import React from 'react';
-import { CustomTable } from '../../components'
-import { makeStyles } from '@material-ui/styles'
+import { CustomTable } from '../../components';
+import { makeStyles } from '@material-ui/styles';
+import {GlobalContext} from '../../context/GlobalState'
 
 const useStyles = makeStyles({
     wrapper: {
@@ -20,29 +21,13 @@ const useStyles = makeStyles({
     }
 })
 
-function createData(name, calories, fat, carbs, protein) {
-    return { name, calories, fat, carbs, protein };
-}
-
-const rows = [
-    createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-    createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-    createData('Eclair', 262, 16.0, 24, 6.0),
-    createData('Cupcake', 305, 3.7, 67, 4.3),
-    createData('Gingerbread', 356, 16.0, 49, 3.9),
-];
-
-const cells = [
-    { name: 'Dessert (100g serving)'},
-    { name: 'Calories' },
-    { name: 'Fat' },
-    { name: 'Carbs' },
-    { name: 'Protein' }
-]
-
 function Dashboard() {
     const classes = useStyles();
+    const context = React.useContext(GlobalContext);
 
+    React.useEffect(() => {
+        console.log(context.got.rows);
+    }, [context])
 
     return (
         <div className={classes.wrapper}>
@@ -50,8 +35,12 @@ function Dashboard() {
                 Dashboard table
             </h1>
             <div className={classes.tableContainer}>
-                <CustomTable cells={cells} rows={rows} checkboxSelection  />
+                {/* <CustomTable cells={cells} rows={rows} checkboxSelection  /> */}
             </div>
+            <button onClick={context.getGotData.bind(
+                    this,
+                    'ssss'
+                  )}>test</button>
         </div>
     )
 }

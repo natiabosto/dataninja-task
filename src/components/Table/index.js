@@ -18,29 +18,34 @@ export default function CustomTable({ cells, rows }) {
     const classes = useStyles();
 
     return (
-        <TableContainer component={Paper}>
-            <Table className={classes.table}>
-                <TableHead>
-                    <TableRow>
-                        {cells && cells.map((cell, index) => (
-                            <TableCell key={index}>{cell.name}</TableCell>
-                        ))}
-                    </TableRow>
-                </TableHead>
-                <TableBody>
-                    {rows && rows.map((row, index) => (
-                        <TableRow key={index}>
-                            <TableCell component="th" scope="row">
-                                {row.name}
-                            </TableCell>
-                            <TableCell align="left">{row.calories}</TableCell>
-                            <TableCell align="left">{row.fat}</TableCell>
-                            <TableCell align="left">{row.carbs}</TableCell>
-                            <TableCell align="left">{row.protein}</TableCell>
-                        </TableRow>
-                    ))}
-                </TableBody>
-            </Table>
-        </TableContainer>
-    );
+        <div>
+            
+        </div>
+    )
+    // return (
+    //     <TableContainer component={Paper}>
+    //         <Table className={classes.table}>
+    //             <TableHead>
+    //                 <TableRow>
+    //                     {cells && cells.map((cell, index) => (
+    //                         <TableCell key={index}>{cell.name}</TableCell>
+    //                     ))}
+    //                 </TableRow>
+    //             </TableHead>
+    //             <TableBody>
+    //                 {rows && rows.map((row, index) => (
+    //                     <TableRow key={index}>
+    //                         <TableCell component="th" scope="row">
+    //                             {row.name}
+    //                         </TableCell>
+    //                         <TableCell align="left">{row.calories}</TableCell>
+    //                         <TableCell align="left">{row.fat}</TableCell>
+    //                         <TableCell align="left">{row.carbs}</TableCell>
+    //                         <TableCell align="left">{row.protein}</TableCell>
+    //                     </TableRow>
+    //                 ))}
+    //             </TableBody>
+    //         </Table>
+    //     </TableContainer>
+    // );
 }

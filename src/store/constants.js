@@ -1,0 +1,1 @@
+export const GET_GRID_STATE = 'GET_GRID_STATE';

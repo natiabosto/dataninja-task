@@ -1,0 +1,1 @@
+export const GET_GOT_STATE = 'GET_GOT_STATE';
