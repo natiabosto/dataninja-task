@@ -1,3 +1,3 @@
 export const isAuthorised = () => {
-    return localStorage.getItem('STK') ? true : false;
+    return localStorage.getItem('stk') ? true : false;
 }

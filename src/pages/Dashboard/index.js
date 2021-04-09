@@ -26,11 +26,13 @@ function Dashboard() {
     const classes = useStyles();
     const context = React.useContext(GlobalContext);
 
+    console.log('context', context)
+
     React.useEffect(() => {
         context.getGridData({
             action: GET_GRID_STATE,
-            gridName: 'got',
-            STK: 'sdfsdfsdf'
+            gridName: 'yuy',
+            stk: 'sdfsdfsdf'
         })
     }, [])
 
@@ -40,20 +42,8 @@ function Dashboard() {
                 Dashboard table
             </h1>
             <div className={classes.tableContainer}>
-                <CustomTable rows={context.got.rows} />
-                {/* <CustomTable cells={cells} rows={rows} checkboxSelection  /> */}
+                <CustomTable rows={context.yuy ? context.yuy.rows : []} />
             </div>
-            {/* <button
-                onClick={() => {
-                    context.getGridData({
-                        action: GET_GRID_STATE,
-                        gridName: 'got',
-                        STK: 'sdfsdfsdf'
-                    })
-                }}
-            >
-                test
-            </button> */}
         </div>
     )
 }

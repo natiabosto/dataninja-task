@@ -272,7 +272,7 @@ export default function EnhancedTable({rows}) {
   const isSelected = (name) => selected.indexOf(name) !== -1;
 
   const emptyRows = rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage);
-console.log(rows)
+  
   return (
     <div className={classes.root}>
       <Paper className={classes.paper}>

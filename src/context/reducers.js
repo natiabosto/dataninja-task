@@ -20,9 +20,10 @@ export const globalReducer = async (state = initialState, action) => {
             catch (e) {
                 console.log(e)
             }
+            console.log(state, action)
             return {
                 ...state,
-                got: {
+                [action.payload.gridName]: {
                     rows: rows
                 }
             };
