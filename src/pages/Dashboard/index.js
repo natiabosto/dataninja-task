@@ -7,7 +7,7 @@ import { GET_GRID_STATE } from '../../context/constants';
 const useStyles = makeStyles({
     wrapper: {
         width: '100vw',
-        height: '100vh',
+        minHeight: '100vh',
         margin: '0 auto',
         backgroundColor: '#eaeaea'
     },
