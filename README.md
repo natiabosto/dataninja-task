@@ -21,3 +21,5 @@ React Context is used for global state management (for grid state fetch, by disp
 * I learned a lot about React Context
 * Used context for global state management, instead of Redux (Took me most of the time)
 * Used jss, instead of css or styled components
+
+## 'ToTal time spent: '3 days''
